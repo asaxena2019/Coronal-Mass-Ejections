@@ -1,0 +1,52 @@
+package cme;
+
+/*
+ * Class CMEMotionDataAnalysis
+ * This class calls the input class in sequence for the user to 
+ * input the data in the program
+ * 
+ */
+public class CMEMotionDataInput {
+
+	public int done = 0;
+	int dataPoints = 3;
+	CMEMotionData dataInp1 = null;
+	CMEMotionData dataInp2 = null;
+	CMEMotionData dataInp3 = null;
+	CMEMotionTime timeInp = null;
+	
+	
+	public CMEMotionDataInput()
+	{
+		timeInp= new CMEMotionTime();
+		
+		timeInp.setYear();
+		timeInp.setMonth();
+		timeInp.setDate();
+		
+		int dp =1;
+		dataInp1 = new CMEMotionData(dp);
+		dataInp1.setDistance();
+		dataInp1.setHour();
+		dataInp1.setMin();
+		
+		dp++;
+		dataInp2 = new CMEMotionData(dp);
+		dataInp2.setDistance();
+		dataInp2.setHour();
+		dataInp2.setMin();
+		
+		dp++;
+		dataInp3 = new CMEMotionData(dp);
+		dataInp3.setDistance();
+		dataInp3.setHour();
+		dataInp3.setMin();
+		
+		dataInp3.setMass();
+		
+		timeInp.getYear();
+		timeInp.getMonth();
+		timeInp.getDate();
+	}
+	
+}
