@@ -1,0 +1,134 @@
+package cme;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/*
+ * Class: CMEMotionTime
+ * This class contains the input data for time line for the CME
+ */
+public class CMEMotionTime {
+	int year = 1900;
+	int month = 1;
+	int date = 1;
+
+	
+	
+	BufferedReader br = null;
+	
+	//Constructor
+	public CMEMotionTime()
+	{
+		br = new BufferedReader(new InputStreamReader(System.in)); 	
+	}
+	
+	/*
+	 * Function: getYear
+	 * Input: void
+	 * Output: float
+	 * This function returns the year as stored in the class .
+	 * 
+	 */
+	public int getYear()
+	{
+		System.out.print("Year " + year + "\n");
+		return year;
+	}
+	
+	/*
+	 * Function: getMonth
+	 * Input: void
+	 * Output: float
+	 * This function returns the year as stored in the class .
+	 * 
+	 */
+	public int getMonth()
+	{
+		System.out.print("Month " + month + "\n");
+		return month;
+	}
+	
+	
+	/*
+	 * Function: getDate
+	 * Input: void
+	 * Output: float
+	 * This function returns the date as stored in the class .
+	 * 
+	 */
+	public int getDate()
+	{
+		System.out.print("Date " + date + "\n");
+		return date;
+	}
+	
+	/*
+	 * Function: setYear
+	 * Input: void
+	 * Output: void
+	 * This function asks the user to input the year in the video.
+	 * 
+	 */
+	public void setYear()
+	{
+		System.out.print("Enter year: ");
+//		String yearString = System.console().readLine();
+		String yearString;
+		try {
+			yearString = br.readLine();
+			year = Integer.parseInt(yearString);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	/*
+	 * Function: setMonth
+	 * Input: void
+	 * Output: void
+	 * This function asks the user to input the month in the video.
+	 * 
+	 */
+	public void setMonth()
+	{
+		System.out.print("Enter month: ");
+//		String monthString = System.console().readLine();
+		String monthString;
+		try {
+			monthString = br.readLine();
+			month = Integer.parseInt(monthString);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+	/*
+	 * Function: setDate
+	 * Input: void
+	 * Output: void
+	 * This function asks the user to input the date in the CME video.
+	 * 
+	 */
+	public void setDate()
+	{
+		System.out.print("Enter Date: ");
+//		String dateString = System.console().readLine();
+		
+		String dateString;
+		try {
+			dateString = br.readLine();
+			date = Integer.parseInt(dateString);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
